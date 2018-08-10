@@ -8,7 +8,7 @@
 - include: pkg-suse.yml
   when: ansible_os_family == "Suse"
 
-- include: pkg-suse.yml
+- include: pkg-windows.yml
   when: ansible_os_family == "Windows"
 
 - include: agent5-linux.yml
