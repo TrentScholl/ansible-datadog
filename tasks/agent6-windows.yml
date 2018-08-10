@@ -19,7 +19,7 @@
   notify: restart DatadogAgent
 
 - name: Remove old configuration file for each Datadog check
-  file:
+  win_file:
     dest: "{{ ansible_env.ProgramData }}\\Datadog\\conf.d\\{{ item }}.yaml"
     state: absent
   with_items: "{{ datadog_checks|list }}"
