@@ -1,0 +1,7 @@
+---
+- name: Install Datadog agent
+  win_package:
+    path: "{{ datadog_msi_url }}"
+    productid: "{{ datadog_msi_product_id }}"
+    ensure: present
+    creates_path: C:\Program Files\Datadog\Datadog Agent
