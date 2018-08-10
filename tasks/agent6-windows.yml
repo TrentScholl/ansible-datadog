@@ -48,5 +48,6 @@
   win_service:
     name: DatadogAgent
     state: stopped
+    force_dependent_services: yes
     start_mode: manual
   when: not datadog_skip_running_check and not datadog_enabled
